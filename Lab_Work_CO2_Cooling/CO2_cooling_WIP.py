@@ -1,4 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
 
+This is a temporary script file.
+"""
 ## Signs on W (in T2 and T3) and Temp Diff sign, graphical interface
 ## Comment 1
 
