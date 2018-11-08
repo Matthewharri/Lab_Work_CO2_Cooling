@@ -1,4 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
 
+This is a temporary script file.
+"""
 ## Signs on W (in T2 and T3) and Temp Diff sign, graphical interface
 ## Comment 1
 
@@ -112,7 +117,7 @@ while T_CO2_Out > Desired_CO2_Temp:
     I = Current(Temp_Diff)
     
     T_CO2_Out = T_CO2_Out - 0.2
-    print (T_CO2_Out, I, Temp_Diff, Temp_6, Temp_5, Temp_4, Temp_3, Temp_2, Temp_1)
+    ## print (T_CO2_Out, I, Temp_Diff, Temp_6, Temp_5, Temp_4, Temp_3, Temp_2, Temp_1)
 
 print('Done!')
 
@@ -120,41 +125,32 @@ print('Done!')
 ##2x2x(3/8)
 
 
-class Application(Frame):
+root = Tk()
+
+
+def Quit():
+    root.destroy()
     
-    def start(self):
-        print("Beginning Measurements")
-        
-        
-    def Widgets(self):
-        self.QUIT = Button(self)
-        self.QUIT["text"] = "QUIT"
-        self.QUIT["fg"]   = "red"
-        self.QUIT["command"] =  self.quit
-        self.QUIT.pack({"side": "right"})
-
-        self.Begin_Test = Button(self)
-        self.Begin_Test["text"] = "Start",
-        self.Begin_Test["command"] = self.start
-        self.Begin_Test.pack({"side": "left"})
-        
-        
-    def Measurements(self):
-        self.TH2O_In = Label(self)
-        self.TH2O_In["text"] = "Water_In_Temp_is:",
-        self.TH2O_In.pack({"side": "bottom"})
-        
 
 
-    def __init__(self, master=None):
-        Frame.__init__(self, master)
-        self.pack()
-        self.Widgets()
-        self.Measurements()
-   
-root = Tk()     
-app = Application(master=root)
+CO2_In_Label = Label(root, text="Temp of CO2 In:").grid(row=0,sticky=E)
+CO2_In_Display = Label(root, text=T_CO2_In).grid(row=0, column=1)
 
-app.master.minsize(500,100)
-app.mainloop()
-root.destroy()
+
+CO2_Out_Label = Label(root, text="Temp of CO2 Out:").grid(row=1,sticky=E)
+CO2_Out_Display = Label(root, text=T_CO2_Out).grid(row=1, column=1)
+
+H2O_In_Label = Label(root, text="Temp of H2O In:").grid(row=2,sticky=E)
+H2O_In_Display = Label(root, text=T_H2O_In).grid(row=2, column=1)
+
+
+H2O_Out_Label = Label(root, text="Temp of H2O Out:").grid(row=3,sticky=E)
+H2O_Out_Display = Label(root, text=T_H2O_Out).grid(row=3, column=1)
+
+Current_Label = Label(root, text="Current:").grid(row=4, sticky=E)
+Current_Display = Label(root, text=I).grid(row=4, column=1)
+
+QUIT = Button(root, text="Close", bg="red", fg="white", command=Quit).grid(row=5, column=4)
+
+
+mainloop()
