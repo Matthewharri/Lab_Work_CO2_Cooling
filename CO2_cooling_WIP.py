@@ -132,32 +132,45 @@ def Quit():
     root.destroy()
     
 
-
+#Display of CO2 in temperature
 CO2_In_Label = Label(root, text="Temp of CO2 In:").grid(row=0,sticky=E)
-CO2_In_Display = Label(root, text=T_CO2_In).grid(row=0, column=1)
+CO2_In_Display = Label(root, text="{0:.3f}".format(T_CO2_In)).grid(row=0, column=1)
+CO2_In_Display = Label(root,text="°C").grid(row=0, column=2)
 
-
+#Display of CO2 out Temperature
 CO2_Out_Label = Label(root, text="Temp of CO2 Out:").grid(row=1,sticky=E)
-CO2_Out_Display = Label(root, text=T_CO2_Out).grid(row=1, column=1)
+CO2_Out_Display = Label(root, text="{0:.3f}".format(T_CO2_Out)).grid(row=1, column=1)
+CO2_Out_Display = Label(root,text="°C").grid(row=1, column=2)
 
+#Display H2O in Temperature
 H2O_In_Label = Label(root, text="Temp of H2O In:").grid(row=2,sticky=E)
-H2O_In_Display = Label(root, text=T_H2O_In).grid(row=2, column=1)
+H2O_In_Display = Label(root, text="{0:.3f}".format(T_H2O_In)).grid(row=2, column=1)
+H2O_In_Display = Label(root,text="°C").grid(row=2, column=2)
 
-
+#Display H2O out Temperature
 H2O_Out_Label = Label(root, text="Temp of H2O Out:").grid(row=3,sticky=E)
-H2O_Out_Display = Label(root, text=T_H2O_Out).grid(row=3, column=1)
+H2O_Out_Display = Label(root, text="{0:.3f}".format(T_H2O_Out)).grid(row=3, column=1)
+H2O_Out_Display = Label(root,text="°C").grid(row=3, column=2)
 
-Current_Label = Label(root, text="DP_H2O:").grid(row=4, sticky=E)
-Current_Display = Label(root, text=DP_H2O).grid(row=4, column=1)
+#Display pressure difference in H2O
+DP_H2O_Label = Label(root, text="DP_H2O:").grid(row=4, sticky=E)
+DP_H2O_Display = Label(root, text="{0:.3f}".format(DP_H2O)).grid(row=4, column=1)
+DP_H2O_Display = Label(root, text="Bar").grid(row=4, column=2)
 
-Current_Label = Label(root, text="P_CO2:").grid(row=5, sticky=E)
-Current_Display = Label(root, text=P_CO2).grid(row=5, column=1)
+#Display CO2 Pressure
+P_CO2_Label = Label(root, text="P_CO2:").grid(row=5, sticky=E)
+P_CO2_Display = Label(root, text="{0:.3f}".format(P_CO2)).grid(row=5, column=1)
+P_CO2_Display = Label(root, text="Bar").grid(row=5, column=2)
 
-Current_Label = Label(root, text="CO2_Flow:").grid(row=6, sticky=E)
-Current_Display = Label(root, text=CO2_Flow).grid(row=6, column=1)
+#Display CO2 flow rate
+CO2_Flow_Label = Label(root, text="CO2_Flow:").grid(row=6, sticky=E)
+CO2_Flow_Display = Label(root, text="{0:.3f}".format(CO2_Flow)).grid(row=6, column=1)
+CO2_Flow_Display = Label(root, text="Kg/s").grid(row=6, column=2)
 
+#Display Current
 Current_Label = Label(root, text="Current:").grid(row=7, sticky=E)
-Current_Display = Label(root, text=I).grid(row=7, column=1)
+Current_Display = Label(root, text="{0:.4f}".format(I)).grid(row=7, column=1)
+Current_Display = Label(root, text="A").grid(row=7, column=2)
 
 QUIT = Button(root, text="Close", bg="red", fg="white", command=Quit).grid(row=8, column=4)
 
