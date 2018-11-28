@@ -147,10 +147,19 @@ H2O_In_Display = Label(root, text=T_H2O_In).grid(row=2, column=1)
 H2O_Out_Label = Label(root, text="Temp of H2O Out:").grid(row=3,sticky=E)
 H2O_Out_Display = Label(root, text=T_H2O_Out).grid(row=3, column=1)
 
-Current_Label = Label(root, text="Current:").grid(row=4, sticky=E)
-Current_Display = Label(root, text=I).grid(row=4, column=1)
+Current_Label = Label(root, text="DP_H2O:").grid(row=4, sticky=E)
+Current_Display = Label(root, text=DP_H2O).grid(row=4, column=1)
 
-QUIT = Button(root, text="Close", bg="red", fg="white", command=Quit).grid(row=5, column=4)
+Current_Label = Label(root, text="P_CO2:").grid(row=5, sticky=E)
+Current_Display = Label(root, text=P_CO2).grid(row=5, column=1)
+
+Current_Label = Label(root, text="CO2_Flow:").grid(row=6, sticky=E)
+Current_Display = Label(root, text=CO2_Flow).grid(row=6, column=1)
+
+Current_Label = Label(root, text="Current:").grid(row=7, sticky=E)
+Current_Display = Label(root, text=I).grid(row=7, column=1)
+
+QUIT = Button(root, text="Close", bg="red", fg="white", command=Quit).grid(row=8, column=4)
 
 
 mainloop()
