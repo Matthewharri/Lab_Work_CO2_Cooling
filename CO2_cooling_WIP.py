@@ -7,7 +7,6 @@ This is a temporary script file.
 
 import tkinter as Tk
 from tkinter import Button
-from tkinter import Frame
 from tkinter import Label
 from tkinter import *
 from tkinter import E
