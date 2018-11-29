@@ -4,20 +4,13 @@ Spyder Editor
 
 This is a temporary script file.
 """
-## Signs on W (in T2 and T3) and Temp Diff sign, graphical interface
-## Comment 1
-
 
 import tkinter as Tk
 from tkinter import Button
 from tkinter import Frame
 from tkinter import Label
 from tkinter import *
-
-#modification
-#secondone
-
-
+from tkinter import E
 
 ## Measured values
 c_CO2 = 1.9 * 10**3 #J/(kg*K)*10**3
